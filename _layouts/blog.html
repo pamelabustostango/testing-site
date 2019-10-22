@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<div class="container">
+{% assign posts=site.posts | where:"lang", page.lang %}  
+    {% for post in posts %}
+    <a href="{{ post.url }}">
+    <div class="card my-3 p-2">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-6 col-sm-4 col-lg-4 ">
+                <img src="{{post.image}}" class="img-fluid" />
+            </div>
+            <div class="col-12 col-sm-8 col-lg-8  ">
+                <h3>{{ post.title }}</h3>
+                <p>{{ post.excerpt }}</p>
+            </div>
+        </div>
+    </div>
+    </a>
+    {% endfor %}
+    
+</div>
+

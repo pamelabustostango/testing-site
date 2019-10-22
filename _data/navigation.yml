@@ -1,0 +1,26 @@
+#HOME
+- name: Inicio
+  lang: es
+  link: "/"
+
+- name: Home
+  lang: en
+  link: "/en"
+
+#PORTFOLIO
+- name: Portfolio
+  lang: es
+  link: "/portfolio"
+
+- name: Portfolio
+  lang: en
+  link: "/portfolio_en"
+
+#BLOG
+- name: Blog
+  lang: es
+  link: "/blog"
+
+- name: Blog
+  lang: en
+  link: "/blog_en"

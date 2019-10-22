@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<div class="container my-5 py-5">
+    <div class="jumbotron text-center hoverable p-4 animated slideInLeft">
+        <div class="row">
+            {% if page.imagen %}
+            <div class="col-12 col-md-6 col-lg-4 mt-3">
+                <img class="img-fluid" src="//images.weserv.nl/?url={{site.url}}/{{page.imagen}}&w=500" alt="{{page.alt}}">
+            </div>
+            {% endif %}    
+            <div class="col-12 col-md-6 col-lg-6 mt-3 align-self-center">
+                <h1 class="">{{ page.title }}</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-10 offset-lg-1 mt-5">
+                <p>{{ page.content }}</p> 
+            </div>
+        </div>
+        {% if page.linkFacebook or page.linkInstagram %}
+        <div class="row align-content-center">
+            {% if page.linkFacebook %}
+            <div class="col">
+                <a href="{{page.linkFacebook}}" target="_blank">
+                    <span class="fab fa-facebook fa-2x"></span>
+                </a>    
+            </div>
+            {% endif %}
+            {% if page.linkInstagram %}
+            <div class="col">
+                <a href="{{page.linkInstagram}}" target="_blank">
+                    <span class="fab fa-instagram fa-2x"></span>
+                </a>    
+            </div>
+            {% endif %}
+        </div>
+        {% endif %}
+
+    </div>
+</div>

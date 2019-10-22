@@ -1,0 +1,50 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="es-AR">
+  <head>
+    <title>{{ site.name }} | {{ page.subtitle }}</title>
+
+    <!--Meta Tags-->
+    {% include meta.html %}
+
+    <!--Material Bootstrap-->
+    {% include mdb.html %}
+
+    <!--Inline CSS-->
+    <style type="text/css">
+      {% capture include_to_scssify %}
+        {% include inline.scss %}
+        {% if page.title == 'portfolio' %}
+          {% include inline-gallery.scss %}
+        {% endif %}
+      {% endcapture %}
+      {{ include_to_scssify | scssify }}!important
+    </style>
+
+    <!--RSS FEED-->
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="/feed.xml" />
+
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <header>
+          {% include navbar.html %}
+          {% if page.title == 'home' %}
+            {% include intro.html %}
+          {% endif %}
+      </header>
+      <main class="mt-5 pt-5">
+        {{ content }}
+      </main>
+      {% include footer.html %}
+      {% include footerScripts.html %}
+
+      <!-- Dark Overlay element -->
+      <div class="overlay"></div>
+    </div>
+  </body>
+</html>
