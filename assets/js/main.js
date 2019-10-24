@@ -1,29 +1,23 @@
-// Animations init
-new WOW().init();
+
 
 $(document).ready(function () {
 
-    $('#dismiss, .overlay').on('click', function () {
-        closeSidebar();
-    });
+    // Animations init
+new WOW().init();
 
-    $('#sidebarCollapse').on('click', function () {
-        openSidebar();
+    $('.navbar-toggler').on('click', function(){
+        openNav();
+    });
+    $('.closeBtn').on('click', function(){
+        closeNav();
     });
 
 });
 
-function openSidebar() {
-    $('#sidebar').addClass('active');
-    // fade in the overlay
-    $('.overlay').addClass('active');
-    $('.collapse.in').toggleClass('in');
-    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+function openNav() {
+    $('#myNav').css('width', '100%');
 }
 
-function closeSidebar(){
-    // hide sidebar
-    $('#sidebar').removeClass('active');
-    // hide overlay
-    $('.overlay').removeClass('active');
+function closeNav(){
+    $('#myNav').css('width', '0');
 }

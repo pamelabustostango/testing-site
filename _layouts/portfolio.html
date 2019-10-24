@@ -1,3 +1,20 @@
 ---
-layout: media
+layout: default
 ---
+<div class="container">
+    <div class="gallery">
+        <h1 class="animated fadeIn">Galeria</h1>
+        <ul class="gallery__list px-0 ">
+            {% for album in site.albums %}
+            <li class="animated fadeIn delay-1s ">
+                <a href="/albums/{{album.title}}">
+                    <figure>
+                        <img tabindex="2" src="{{album.header-img}}" alt="{{album.album-title}}" class="hover-shadow">
+                    </figure>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <!-- The Modal/Lightbox -->
+</div>

@@ -52,7 +52,7 @@ url: "https://pamelabustos.github.io"                      #
 theme: minima                                              #
 #                                                          #
 #Material Design Bootstrap                                 # 
-mdb: true                                                  #
+mdb: false                                                  #
 #                                                          #
 plugins:                                                   #
   - jekyll-feed                                            #
@@ -66,6 +66,8 @@ future: true                                               #
 collections:                                               #                                                         #
   galeria:                                                 #
     output: false                                          #
+  albums:
+    output: true
 #                                                          #  
 #  testimonios:                                             #
 #    output: false                                          #

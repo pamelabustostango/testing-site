@@ -3,7 +3,7 @@ layout: compress
 ---
 
 <!DOCTYPE html>
-<html lang="es-AR">
+<html lang="{{page.lang}}">
   <head>
     <title>{{ site.name }} | {{ page.subtitle }}</title>
 
@@ -17,9 +17,7 @@ layout: compress
     <style type="text/css">
       {% capture include_to_scssify %}
         {% include inline.scss %}
-        {% if page.title == 'portfolio' %}
           {% include inline-gallery.scss %}
-        {% endif %}
       {% endcapture %}
       {{ include_to_scssify | scssify }}!important
     </style>
@@ -43,8 +41,9 @@ layout: compress
       {% include footer.html %}
       {% include footerScripts.html %}
 
-      <!-- Dark Overlay element -->
-      <div class="overlay"></div>
+      <!-- nav overlay -->
+      {% include overlay.html %}
+      
     </div>
   </body>
 </html>
