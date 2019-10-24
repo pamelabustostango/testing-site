@@ -6,7 +6,7 @@ layout: default
         <h1 class="animated fadeIn">{{page.album-title}}</h1>
         <ul class="gallery__list px-0 ">
             {% for img in page.images %}
-            <li class="wow fadeIn delay-1s ">
+            <li class="animated fadeIn delay-1s ">
                 <figure>
                     <img tabindex="2" src="{{img.image_path}}" alt="{{img.caption}}"  onclick="openModal();currentSlide({{img.title}})" class="hover-shadow">
                 </figure>
