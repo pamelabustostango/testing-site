@@ -42,7 +42,7 @@
               {% for alt-page in pages %}
                 {% if alt-page.lang != page.lang %}
                   <li>
-                    <a href="{{site.baseurl}}/{{ alt-page.url }}" class="{{ alt-page.lang }}">{{ alt-page.lang | capitalize }}</a>
+                    <a href="{{site.baseurl}}{{ alt-page.url }}" class="{{ alt-page.lang }}">{{ alt-page.lang | capitalize }}</a>
                   </li>
                 {% endif %}
               {% endfor %}
@@ -59,7 +59,7 @@
               {% for post in posts %}
               {% if post.lang != page.lang %}
                   <li>
-                    <a href="{{site.baseurl}}/{{ post.url }}" class="{{ post.lang }}">{{ post.lang | capitalize }}</a>
+                    <a href="{{site.baseurl}}{{ post.url }}" class="{{ post.lang }}">{{ post.lang | capitalize }}</a>
                   </li>
                 {% endif %}
               {% endfor %}
