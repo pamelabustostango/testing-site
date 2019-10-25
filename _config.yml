@@ -43,10 +43,10 @@ blog:
 
 #########NO MODIFICAR#######################################
 #DIRECCION BASE                                            #
-baseurl: "/" # the subpath of your site, e.g. /blog        #
+baseurl: "testing-site/" # the subpath of your site, e.g.  #
 #                                                          #
 #DOMINIO DEL SITIO WEB                                     #
-url: "https://pamelabustos.github.io"                      #
+url: "https://pamelabustostango.github.io"                  #
 #                                                          # 
 # Build settings                                           #
 theme: minima                                              #
