@@ -7,7 +7,7 @@ layout: default
         <ul class="gallery__list px-0 ">
             {% for album in site.albums %}
             <li class="animated fadeIn delay-1s ">
-                <a href="/albums/{{album.title}}">
+                <a href="{{site.url}}/albums/{{album.title}}">
                     <figure>
                         <img tabindex="2" src="{{site.url}}{{album.header-img}}" alt="{{album.album-title}}" class="hover-shadow">
                     </figure>
