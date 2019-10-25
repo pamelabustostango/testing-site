@@ -43,7 +43,7 @@ blog:
 
 #########NO MODIFICAR#######################################
 #DIRECCION BASE                                            #
-baseurl: "testing-site/" # the subpath of your site, e.g.  #
+baseurl: "testing-site" # the subpath of your site, e.g.  #
 #                                                          #
 #DOMINIO DEL SITIO WEB                                     #
 url: "https://pamelabustostango.github.io"                  #
@@ -52,7 +52,7 @@ url: "https://pamelabustostango.github.io"                  #
 theme: minima                                              #
 #                                                          #
 #Material Design Bootstrap                                 # 
-mdb: false                                                  #
+mdb: true                                                  #
 #                                                          #
 plugins:                                                   #
   - jekyll-feed                                            #
