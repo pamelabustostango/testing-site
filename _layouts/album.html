@@ -8,7 +8,7 @@ layout: default
             {% for img in page.images %}
             <li class="animated fadeIn delay-1s ">
                 <figure>
-                    <img tabindex="2" src="{{img.image_path}}" alt="{{img.caption}}"  onclick="openModal();currentSlide({{img.title}})" class="hover-shadow">
+                    <img tabindex="2" src="{{site.url}}{{img.image_path}}" alt="{{img.caption}}"  onclick="openModal();currentSlide({{img.title}})" class="hover-shadow">
                 </figure>
             </li>
             {% endfor %}
@@ -21,7 +21,7 @@ layout: default
         <div class="modal-content">
             {% for img in page.images %}
             <div class="mySlides py-auto justify-content-center">
-            <img class="align-self-center" src="{{img.imagen}}" style="max-height:100vh; max-width: 100vw; margin: auto;">
+            <img class="align-self-center" src="{{site.url}}{{img.imagen}}" style="max-height:100vh; max-width: 100vw; margin: auto;">
             </div>
             {% endfor %}
         
