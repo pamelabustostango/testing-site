@@ -49,10 +49,10 @@ videos:
 
 #########NO MODIFICAR#######################################
 #DIRECCION BASE                                            #
-baseurl: "/" # the subpath of your site, e.g.  #
+baseurl: "/testing-site" # the subpath of your site, e.g.  #
 #                                                          #
 #DOMINIO DEL SITIO WEB                                     #
-url: "https://pamelabustostango.github.io/testing-site"    #
+url: "https://pamelabustostango.github.io"    #
 #                                                          # 
 # Build settings                                           #
 theme: minima                                              #
