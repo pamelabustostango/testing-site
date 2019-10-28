@@ -16,8 +16,13 @@ layout: compress
     <!--Inline CSS-->
     <style type="text/css">
       {% capture include_to_scssify %}
-        {% include inline.scss %}
-          {% include inline-gallery.scss %}
+        {% if page.ref == 'portfolio' %}
+          {% include inlinePortfolio.scss %}
+        {% else if page.type == 'album' %}
+          {% include inlineAlbum.scss %}
+        {% else %}
+          {% include inline.scss %}
+        {% endif %}
       {% endcapture %}
       {{ include_to_scssify | scssify }}!important
     </style>
@@ -27,23 +32,6 @@ layout: compress
 
   </head>
 
-  <body>
-    <div class="wrapper">
-      <header>
-          {% include navbar.html %}
-          {% if page.title == 'home' %}
-            {% include intro.html %}
-          {% endif %}
-      </header>
-      <main class="mt-5 pt-5">
-        {{ content }}
-      </main>
-      {% include footer.html %}
-      {% include footerScripts.html %}
+  {{ content }}
 
-      <!-- nav overlay -->
-      {% include overlay.html %}
-      
-    </div>
-  </body>
 </html>

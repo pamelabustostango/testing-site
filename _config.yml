@@ -31,6 +31,12 @@ portfolio:
 blog:
   es: blog.html
   en: blog_en.html
+contacto:
+  es: contacto.html
+  en: contact.html
+videos:
+  es: videos.html
+  en: videos_en.html
 
 ############################################################  
 
@@ -43,7 +49,7 @@ blog:
 
 #########NO MODIFICAR#######################################
 #DIRECCION BASE                                            #
-baseurl: "/" # the subpath of your site, e.g.  #
+baseurl: "" # the subpath of your site, e.g.  #
 #                                                          #
 #DOMINIO DEL SITIO WEB                                     #
 url: "https://pamelabustostango.github.io/testing-site"    #
@@ -64,8 +70,6 @@ future: true                                               #
 #                                                          #
 #Collections                                               #
 collections:                                               #                                                         #
-  galeria:                                                 #
-    output: false                                          #
   albums:
     output: true
 #                                                          #  

@@ -16,6 +16,15 @@
   lang: en
   link: "/portfolio_en"
 
+#VIDEOS
+- name: Videos
+  lang: es
+  link: "/videos"
+
+- name: Videos
+  lang: en
+  link: "/videos_en"
+
 #BLOG
 - name: Blog
   lang: es
@@ -24,3 +33,12 @@
 - name: Blog
   lang: en
   link: "/blog_en"
+
+#CONTACTO
+- name: Contacto
+  lang: es
+  link: "/contacto"
+
+- name: Contact
+  lang: en
+  link: "/contact"

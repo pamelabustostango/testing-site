@@ -1,20 +1,71 @@
 ---
 layout: default
 ---
-<div class="container">
-    <div class="gallery">
-        <h1 class="animated fadeIn">Galeria</h1>
-        <ul class="gallery__list px-0 ">
-            {% for album in site.albums %}
-            <li class="animated fadeIn delay-1s ">
-                <a href="{{site.url}}/albums/{{album.title}}">
-                    <figure>
-                        <img tabindex="2" src="{{site.url}}{{album.header-img}}" alt="{{album.album-title}}" class="hover-shadow">
-                    </figure>
-                </a>
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
-    <!-- The Modal/Lightbox -->
+<body>
+    <div class="wrapper">
+        <header>
+            <!--NAVBAR-->
+            {% include navbar.html %}
+            <!--NAVBAR-->
+        </header>
+
+        <!-- Main start -->
+        <main class="pt-5">
+            <div class="container">
+                <h1>{{page.title | capitalize }}</h1>
+                <p>{{page.subtitle}}</p>
+                <div id="lightbox" class="grid my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+                    <div class="grid-sizer col-12 col-sm-6 col-md-4"></div>
+                    {% for image in site.albums %}
+                    <div class="grid-item col-12 col-sm-6 col-md-4 my-3 ">
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="p-1 bg-white hoverable"> 
+                            <a href="{{site.url}}{{image.url}}">
+
+                                <img src="{{site.url}}{{image.header-img}}" class="img-fluid" alt="{{image.title}}" />
+
+                            
+                            <figcaption>
+                                {{image.title}}
+                            </figcaption>   
+                            </a>                          
+                        </figure>
+                    </div>
+                    {% endfor %}                         
+                </div>
+                          
+            </div>      
+        </main>
+        <!-- MAIN END-->
+
+    
 </div>
+
+
+        <!--FOOTER-->
+        {% include footer.html %}
+        <!--FOOTER ENDS-->
+
+        <!-- SCRIPTS -->
+
+        <!--COMMON SCRIPTS-->
+        {% include footerScripts.html %}
+
+        <!-- MASONRY -->
+        <script src="{{site.url}}/assets/js/masonry.pkgd.min.js"></script>
+        <script src="{{site.url}}/assets/js/imagesloaded.pkgd.min.js"></script>
+
+        <script type="text/javascript">
+            var $grid = $('.grid').masonry({
+                itemSelector: '.grid-item',
+                columnWidth: '.grid-sizer',      
+            });            
+        </script>
+
+        <!-- SCRIPTS ENDS -->
+
+        <!-- NAV OVERLAY -->
+        {% include overlay.html %}
+        <!-- NAV OVERLAY ENDS-->
+
+    </div>
+</body>

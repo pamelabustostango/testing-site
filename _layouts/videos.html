@@ -1,0 +1,52 @@
+---
+layout: default
+---
+<body>
+    <header>
+        <!--NAVBAR-->
+        {% include navbar.html %}
+        <!--NAVBAR-->
+    </header>
+    <main class="container mt-5">
+        <h1>{{page.title}}</h1>
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+        <div class="row h-100">
+            {% for video in page.videos %}
+            <div class="col-12 col-md-6 my-3 animated fadeIn">
+                {% if video.type == 'facebook' %}
+                <!-- Your embedded video player code -->
+                <div class="fb-video" data-href="{{video.link}}" data-allowfullscreen="true" data-show-text="false">
+                    <div class="fb-xfbml-parse-ignore">
+                        <blockquote cite="{{video.link}}">
+                        <a href="{{video.link}}">{{video.title}}</a>
+                        <p>{{video.title}}</p>
+                        Posted by <a href="{{site.data.redes.facebook}}">Facebook</a>
+                        </blockquote>
+                    </div>
+                </div>
+                {% endif %}
+                {% if video.type == 'youtube' %}
+                <iframe width="100%" height="100%" src="{{video.link}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+    <!--FOOTER-->
+    {% include footer.html %}
+    <!--FOOTER ENDS-->
+
+    <!-- SCRIPTS -->
+
+    <!--COMMON SCRIPTS-->
+    {% include footerScripts.html %}
+    <!-- SCRIPTS ENDS -->
+
+    <!-- NAV OVERLAY -->
+    {% include overlay.html %}
+    <!-- NAV OVERLAY ENDS-->
+
+
+</body>

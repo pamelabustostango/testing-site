@@ -1,68 +1,121 @@
 ---
 layout: default
 ---
-<div class="container">
-    <section class="my-5">
-        <div class="row justify-items-center text-center">
-            <div class="col-12 col-md-6 justify-items-center">
-                <img src="{{site.url}}/assets/images/port-6.jpg" class="img-fluid wow fadeIn" />
+<body>
+    <div class="wrapper">
+      <header>
+        <!--NAVBAR-->
+        {% include navbar.html %}
+        <!--NAVBAR-->
+        
+        <!-- Intro -->
+        <section class="view">
+
+            <div class="row">
+                <div class="col-md-6 col-lg-7 order-2 order-md-1">
+                    <div class="d-flex flex-column justify-content-center align-items-center h-100 p-5">
+                        <h1 class="heading display-3 animated zoomIn">{{ page.portada-titulo }}</h1>
+                        <h4 class="subheading font-weight-bold animated zoomIn">{{ page.portada-subtitulo }}</h4>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-5 order-1 order-md-2 animated fadeIn">
+                    <div class="view">
+                        <img src="{{site.url}}/assets/images/port-3.jpg" class="img-fluid" alt="smaple image">
+                        <div class="mask flex-center hm-gradient"></div>
+                    </div>
+                </div>
             </div>
-            <div class="col-12 col-md-6 align-self-center p-5 wow fadeInRight">
-                <h2>Presentación</h2>
-                <p class="text-center">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Risus viverra adipiscing at in tellus integer feugiat scelerisque varius. Lacus sed turpis tincidunt id aliquet. 
-                    In ante metus dictum at tempor. Justo nec ultrices dui sapien eget mi proin.
-                </p>
+
+        </section>
+      <!-- INTRO ENDS-->
+    
+    </header>
+
+        <!-- MAIN START -->
+
+        <main class="mt-5 pt-5">
+            <div class="container">
+                <section class="my-5">
+                    <div class="row justify-items-center text-center">
+                        <div class="col-12 col-md-6 justify-items-center">
+                            <img src="{{site.url}}/assets/images/port-6.jpg" class="img-fluid wow fadeIn" />
+                        </div>
+                        <div class="col-12 col-md-6 align-self-center p-5 wow fadeInRight">
+                            {% if page.parrafo-1-titulo %}
+                                <h2>{{ page.parrafo-1-titulo }}</h2>
+                            {% endif %}
+                            <p class="text-center">
+                                {{ page.parrafo-1-titulo }}
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class="my-5">
+                    <div class="row justify-items-center text-center">
+                        <div class="col-12 col-md-6 align-self-center p-5 order-2 order-md-1 wow fadeInLeft">
+                            {% if page.parrafo-2-titulo %}
+                                <h2>{{ page.parrafo-2-titulo }}</h2>
+                            {% endif %}
+                            <p class="text-center">
+                                {{ page.parrafo-2-texto }}
+                            </p>
+                            <a class="nav-link text-danger" href="/portfolio">Ver más</a>
+                        </div>
+                        <div class="col-12 col-md-6  justify-items-center order-1 order-md-2">
+                            <img src="{{site.url}}/assets/images/port-4.jpg" class="img-fluid wow fadeIn" />
+                        </div>
+                    </div>
+                </section>
+                <section class="my-5">
+                    <div class="row justify-items-center text-center">
+                        <div class="col-12 col-md-6  justify-items-center">
+                            <img src="{{site.url}}/assets/images/port-8.jpg" class="img-fluid wow fadeInLeft" />
+                        </div>
+                        <div class="col-12 col-md-6 align-self-center p-5 wow fadeInRight">
+                            {% if page.parrafo-3-titulo %}
+                                <h2>{{ page.parrafo-3-titulo }}</h2>
+                            {% endif %}
+                            <p class=" text-center">
+                                {{ page.parrafo-3-texto }}
+                            </p>
+                        </div>
+                    </div>
+                </section>
+                <section class="my-5">
+                    <div class="row justify-items-center text-center">
+                        <div class="col-12 col-md-6 align-self-center p-5 order-2 order-md-1 wow fadeInLeft">
+                            {% if page.parrafo-4-titulo %}
+                                <h2>{{ page.parrafo-4-titulo }}</h2>
+                            {% endif %}
+                            <p class="text-center">
+                                {{ page.parrafo-4-texto }}
+                            </p>
+                            <a class="nav-link text-danger" href="/blog">Ver más</a>
+                        </div>
+                        <div class="col-12 col-md-6  justify-items-center order-1 order-md-2">
+                            <img src="{{site.url}}/assets/images/port-4.jpg" class="img-fluid wow fadeIn" />
+                        </div>
+                    </div>
+                </section>
             </div>
-        </div>
-    </section>
-    <section class="my-5">
-        <div class="row justify-items-center text-center">
-            <div class="col-12 col-md-6 align-self-center p-5 order-2 order-md-1 wow fadeInLeft">
-                <h2>Trabajos - Qué, para quiénes</h2>
-                <p class="text-center">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Risus viverra adipiscing at in tellus integer feugiat scelerisque varius. Lacus sed turpis tincidunt id aliquet. 
-                    In ante metus dictum at tempor. Justo nec ultrices dui sapien eget mi proin.
-                </p>
-                <a class="nav-link text-danger" href="/portfolio">Ver más</a>
-            </div>
-            <div class="col-12 col-md-6  justify-items-center order-1 order-md-2">
-                <img src="{{site.url}}/assets/images/port-4.jpg" class="img-fluid wow fadeIn" />
-            </div>
-        </div>
-    </section>
-    <section class="my-5">
-        <div class="row justify-items-center text-center">
-            <div class="col-12 col-md-6  justify-items-center">
-                <img src="{{site.url}}/assets/images/port-8.jpg" class="img-fluid wow fadeInLeft" />
-            </div>
-            <div class="col-12 col-md-6 align-self-center p-5 wow fadeInRight">
-                <h2>Detalle trabajo - Cómo</h2>
-                <p class=" text-center">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Risus viverra adipiscing at in tellus integer feugiat scelerisque varius. Lacus sed turpis tincidunt id aliquet. 
-                    In ante metus dictum at tempor. Justo nec ultrices dui sapien eget mi proin.
-                </p>
-            </div>
-        </div>
-    </section>
-    <section class="my-5">
-        <div class="row justify-items-center text-center">
-            <div class="col-12 col-md-6 align-self-center p-5 order-2 order-md-1 wow fadeInLeft">
-                <h2>Conocer más - Link al blog</h2>
-                <p class="text-center">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                    Risus viverra adipiscing at in tellus integer feugiat scelerisque varius. Lacus sed turpis tincidunt id aliquet. 
-                    In ante metus dictum at tempor. Justo nec ultrices dui sapien eget mi proin.
-                </p>
-                <a class="nav-link text-danger" href="/blog">Ver más</a>
-            </div>
-            <div class="col-12 col-md-6  justify-items-center order-1 order-md-2">
-                <img src="{{site.url}}/assets/images/port-4.jpg" class="img-fluid wow fadeIn" />
-            </div>
-        </div>
-    </section>
-    {% include contactForm.html %}
-</div>
+        </main>
+
+        <!-- MAIN END-->
+
+        <!--FOOTER-->
+        {% include footer.html %}
+        <!--FOOTER ENDS-->
+
+        <!-- SCRIPTS -->
+
+        <!--COMMON SCRIPTS-->
+        {% include footerScripts.html %}
+
+        <!--SCRIPTS ENDS-->
+
+        <!-- NAV OVERLAY -->
+        {% include overlay.html %}
+        <!-- NAV OVERLAY ENDS-->
+    </div> 
+</body>
