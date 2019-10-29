@@ -16,10 +16,10 @@ layout: default
                 <nav aria-label="breadcrumb" class="mt-5">
                         <ol class="breadcrumb purple lighten-4">
                             {% if page.lang == 'en' %}
-                            <li class="breadcrumb-item"><a href="/portfolio_en.html">Portfolio</a></li>
+                            <li class="breadcrumb-item"><a href="{{site.url}}/portfolio_en.html">Portfolio</a></li>
                             <li class="breadcrumb-item">{{page.title}}</li>
                             {% else %}
-                            <li class="breadcrumb-item"><a href="/portfolio.html">Portfolio</a></li>
+                            <li class="breadcrumb-item"><a href="{{site.url}}/portfolio.html">Portfolio</a></li>
                             <li class="breadcrumb-item">{{page.title}}</li>
                             {% endif %}
                         </ol>
