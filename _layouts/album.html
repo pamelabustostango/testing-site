@@ -27,21 +27,18 @@ layout: default
                 <!-- Breadcrumb ends -->
                 <div id="lightbox" class="grid my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
                     <div class="grid-sizer col-12 col-sm-6 col-md-4"></div>
+                    {% assign pid = 0 %}
                     {% for image in page.images %}
-                    <!--
+                    
                     <div class="grid-item col-12 col-sm-6 col-md-4 my-3">
-                        <figure>
-                            <img class="img-fluid" src="{{site.url}}{{image.image_path}}" alt="{{image.caption}}"/>
-                        </figure>
-                    </div>
-                    -->
-                    <div class="grid-item col-12 col-sm-6 col-md-4 my-3">
-                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-                            <a href="{{site.url}}{{image.image_path}}" itemprop="contentUrl" data-size="{{image.size}}" data-pid="{{image.image_path}}">
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" data-pid="{{pid}}">
+                            <a href="{{site.url}}{{image.image_path}}" itemprop="contentUrl" data-size="{{image.size}}">
                                 <img src="{{site.url}}{{image.image_path}}" class="img-fluid" itemprop="thumbnail" alt="{{image.caption}}" />
                             </a>
                         </figure>
                     </div>
+                    {% assign pid = pid | plus: 1 %}
+                        
                     {% endfor %}                         
                 </div>
                           
@@ -71,6 +68,10 @@ layout: default
             var $grid = $('.grid').masonry({
                 itemSelector: '.grid-item',
                 columnWidth: '.grid-sizer',      
+            });
+            // layout Masonry after each image loads
+            $grid.imagesLoaded().progress( function() {
+                $grid.masonry('layout');
             });            
         </script>
 

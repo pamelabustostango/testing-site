@@ -29,6 +29,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
             linkEl = figureEl.children[0]; // <a> element
 
             size = linkEl.getAttribute('data-size').split('x');
+            pid = linkEl.parentElement.getAttribute('data-pid').split();
 
 
             // create slide object
@@ -36,7 +37,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
                 src: linkEl.getAttribute('href'),
                 w: parseInt(size[0], 10),
                 h: parseInt(size[1], 10),
-                pid: i
+                pid: pid
             };
 
 
@@ -81,26 +82,8 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 
         // find index of clicked item by looping through all child nodes
         // alternatively, you may define index via data- attribute
-        var clickedGallery = clickedListItem.parentNode,
-            childNodes = clickedListItem.parentNode.childNodes,
-            numChildNodes = childNodes.length,
-            nodeIndex = 0,
-            index;
-
-
-        for (var i = 0; i < numChildNodes; i++) {
-            if(childNodes[i].nodeType !== 1) { 
-                continue; 
-            }
-
-            if(childNodes[i] === clickedListItem) {
-                index = nodeIndex;
-                break;
-            }
-            nodeIndex++;
-        }
-
-
+        var clickedGallery = clickedListItem.parentNode;
+        var index = clickedListItem.getAttribute('data-pid').split();
 
         if(index >= 0) {
             // open PhotoSwipe if valid index found
