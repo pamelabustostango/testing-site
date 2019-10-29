@@ -60,16 +60,15 @@ layout: default
         {% include footerScripts.html %}
 
         <!-- MASONRY -->
-        <!--<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>-->
         <script src="{{site.url}}/assets/js/masonry.pkgd.min.js"></script>
         <script src="{{site.url}}/assets/js/imagesloaded.pkgd.min.js"></script>
 
-        <script type="text/javascript">
+        <script>
             var $grid = $('.grid').masonry({
                 itemSelector: '.grid-item',
                 columnWidth: '.grid-sizer',      
             });
-            // layout Masonry after each image loads
+            /*layout Masonry after each image loads*/
             $grid.imagesLoaded().progress( function() {
                 $grid.masonry('layout');
             });            
