@@ -10,13 +10,14 @@ layout: default
 
 <main class="container mt-5">
     <h1>Blog</h1>
+
 {% assign posts=site.posts | where:"lang", page.lang %}  
     {% for post in posts %}
     <!--Small news-->
-    <div class="row">
-            <div class="col-md-3">
+    <div class="row bg-white view z-depth-1 my-5 align-items-center">
+            <div class="col-md-3 px-0">
               <!--Image-->
-              <div class="view rounded z-depth-1">
+              <div class="view">
                 <img src="{{ site.url }}{{post.image}}" class="img-fluid" alt="Minor sample post image">
                 <a href="{{site.baseurl}}{{ post.url }}" }}>
                   <div class="mask rgba-white-slight"></div>
@@ -25,19 +26,18 @@ layout: default
             </div>
 
             <!--Excerpt-->
-            <div class="col-md-9">
-              <p class="dark-grey-text">
-                <strong>{{post.date }}</strong>
-              </p>
-              <a href="{{site.baseurl}}{{ post.url }}"><p>{{ post.excerpt }}</p>
-                <i class="fas fa-angle-right float-right"></i>
+            <div class="col-md-9 p-2">
+              {{ post.excerpt | truncatewords: 30 }}
+              <a class="nav-link text-danger text-center">Seguir leyendo</a>
               </a>
-            </div>
-
-          </div>
+              
+            </div> 
           <hr>
           <!--/Small news-->
+          <div class="postDate">{{ post.date | date: "%-d-%m-%Y" }}</div> 
+        </div>
     {% endfor %}
+  
 </main>
 
     <!--FOOTER-->

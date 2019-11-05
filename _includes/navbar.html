@@ -1,16 +1,14 @@
 
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" id="horizontalBar">
+<nav class="navbar navbar-red navbar-light fixed-top scrolling-navbar pt-4" id="horizontalBar">
    
     
-  <a class="navbar-brand" href="{{site.baseurl}}">
-      <div style="width: 100px; position: absolute; fill: white; top: 10px;">
-      {% include logo.svg %}
-      </div>
-    </a>
+  <!--<a class="navbar-brand text-wrap" href="{{site.baseurl}}">
+      Pamela Bustos
+    </a>-->
 
-    <button class="navbar-toggler order-3" type="button"
+    <button class="navbar-toggler order-3 text-danger" type="button"
       aria-controls="myNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <span class="fa fa-bars"></span>
     </button>
 
     <!-- NAVIGATION ITEMS -->
@@ -33,7 +31,7 @@
       <!-- LANG SELECTOR-->
       {% if page.type != 'post' %}
       <div class="order-2 nav-item dropdown ml-auto">
-          <a class="nav-link text-white dropdown-toggle " id="navbarDropdownMenuLink" data-toggle="dropdown"
+          <a class="nav-link dropdown-toggle " id="navbarDropdownMenuLink" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 {{ page.lang | capitalize }}
           </a>
@@ -50,7 +48,7 @@
       </div>
       {% else %}
       <div class="order-2 nav-item dropdown ml-auto">
-          <a class="nav-link text-white dropdown-toggle " id="navbarDropdownMenuLink" data-toggle="dropdown"
+          <a class="nav-link dropdown-toggle " id="navbarDropdownMenuLink" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 {{ page.lang | capitalize }}
           </a>

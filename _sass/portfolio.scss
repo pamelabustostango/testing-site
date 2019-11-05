@@ -5,12 +5,18 @@
 }
 
 /* Custom Properties */
-* {
+*, *::before, *::after {
     box-sizing: border-box;
 }
 
+.mask{
+    opacity: 0;
+    font-weight: 700;
+}
+.mask:hover{
+    opacity: 1;
+}
 
-figcaption {
-    color: black;
-    font-size: 2rem;
+h1, .h4 {
+    font-weight: 700;
 }

@@ -1,33 +1,36 @@
 ---
 layout: default
 ---
-<body>
+<body class="pt-4">
     <div class="wrapper">
         <header>
             <!--NAVBAR-->
             {% include navbar.html %}
             <!--NAVBAR-->
+            <div class="container">
+                <h1 style="font-size: 2.5rem;">{{page.title | capitalize }}</h1>
+            </div>
         </header>
 
         <!-- Main start -->
         <main class="pt-5">
             <div class="container">
-                <h1>{{page.title | capitalize }}</h1>
-                <p>{{page.subtitle}}</p>
                 <div id="lightbox" class="grid my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
                     <div class="grid-sizer col-12 col-sm-6 col-md-4"></div>
                     {% for image in site.albums %}
                     <div class="grid-item col-12 col-sm-6 col-md-4 my-3 ">
-                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" class="p-1 bg-white hoverable"> 
-                            <a href="{{site.url}}{{image.url}}">
-
-                                <img src="{{site.url}}{{image.header-img}}" class="img-fluid" alt="{{image.title}}" />
-
-                            
-                            <figcaption>
-                                {{image.title}}
-                            </figcaption>   
-                            </a>                          
+                        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject" > 
+                                <div class="view zoom">
+                                    <a href="{{site.url}}{{image.url}}">
+                                        <img src="{{site.url}}{{image.header-img}}" class="img-fluid" alt="{{image.title}}" />
+                                        <div class="mask hoverable flex-center rgba-red-light">
+                                            <p class="white-text h4">Descubrir</p>
+                                        </div>
+                                    </a>
+                                </div>             
+                        <figcaption class="pt-1">
+                            {{image.title}}
+                        </figcaption>                          
                         </figure>
                     </div>
                     {% endfor %}                         

@@ -1,30 +1,33 @@
 ---
 layout: default
 ---
-<body>
+<body class="pt-3 bg-white" >
     <div class="wrapper">
         <header>
             <!--NAVBAR-->
             {% include navbar.html %}
             <!--NAVBAR-->
+            <div class="container d-flex ">
+                <nav aria-label="breadcrumb">
+                    <ul class="list-unstyled bread">
+                        <li class="nav-item">
+                            <a {% if page.lang == 'en' %} href="{{site.url}}/portfolio_en.html"
+                                {% else %} href="{{site.url}}/portfolio.html" {% endif %}
+                                 style="font-size: 2.5rem;">
+                                Portfolio
+                            </a>
+                        </li>
+                        <li>
+                            <h1 class="h2"><span class="fa fa-caret-right fa-fw"></span>{{page.title}}</h1>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </header>
 
         <!-- Main start -->
         <main class="pt-5">
             <div class="container">
-                <!--BreadCrumb-->
-                <nav aria-label="breadcrumb" class="mt-5">
-                        <ol class="breadcrumb purple lighten-4">
-                            {% if page.lang == 'en' %}
-                            <li class="breadcrumb-item"><a href="{{site.url}}/portfolio_en.html">Portfolio</a></li>
-                            <li class="breadcrumb-item">{{page.title}}</li>
-                            {% else %}
-                            <li class="breadcrumb-item"><a href="{{site.url}}/portfolio.html">Portfolio</a></li>
-                            <li class="breadcrumb-item">{{page.title}}</li>
-                            {% endif %}
-                        </ol>
-                      </nav>
-                <!-- Breadcrumb ends -->
                 <div id="lightbox" class="grid my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
                     <div class="grid-sizer col-12 col-sm-6 col-md-4"></div>
                     {% assign pid = 0 %}

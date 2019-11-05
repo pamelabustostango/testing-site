@@ -3,21 +3,32 @@ $pale-chesnut: #e0b7b7;
 $ganesboro: #dbdbdb;
 
 
-$main-background-color: $ganesboro;
-$navbar-horizontal-background-color: trasparent;
+$main-background-color: white;
+$navbar-horizontal-background-color: transparent;
+$navbar-horizontal-background-scrolled-color: $ganesboro;
 $sidebar-background-color: $ganesboro;
-
+//$navbar-font: #ff4444;
+$navbar-font: #2BBBAD;
 
 body{
     background-color: $main-background-color;
 }
 #horizontalBar{
     background-color: $navbar-horizontal-background-color;
+    color: black;
 }
 #sidebar{
     background-color: $sidebar-background-color;
 }
 
 .top-nav-collapse {
-    background-color: $navbar-horizontal-background-color !important;
+    //background-color: $navbar-horizontal-background-scrolled-color !important;
+    background-color: transparent !important;
   }
+
+.navbar-red {
+    color: $navbar-font !important;
+}
+.navbar-toggler {
+    color: $navbar-font !important;
+}

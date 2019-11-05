@@ -18,8 +18,10 @@ layout: compress
       {% capture include_to_scssify %}
         {% if page.ref == 'portfolio' %}
           {% include inlinePortfolio.scss %}
-        {% else if page.type == 'album' %}
+        {% elsif page.type == 'album' %}
           {% include inlineAlbum.scss %}
+        {% elsif page.ref == 'blog' %}
+          {% include inlineBlog.scss %}
         {% else %}
           {% include inline.scss %}
         {% endif %}
@@ -29,6 +31,8 @@ layout: compress
 
     <!--RSS FEED-->
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="/feed.xml" />
+
+     <link href="https://fonts.googleapis.com/css?family=Cairo:400,700&display=swap" rel="stylesheet"> 
 
   </head>
 

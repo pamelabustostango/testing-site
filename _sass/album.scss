@@ -1,3 +1,16 @@
 .grid-sizer{
     display: none;
 }
+
+img:hover{
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    transform: scale(1.02);
+}
+img{
+    transition: all 0.3s ease-out;
+}
+
+.bread{
+    font-weight: 700;
+}
